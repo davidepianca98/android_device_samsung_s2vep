@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/s2vep/BoardConfigVendor.mk
+-include vendor/samsung/i9105P/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -15,7 +15,7 @@ TARGET_BOOTLOADER_BOARD_NAME := capri
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200n8 mem=832M@0xA2000000 androidboot.console=ttyS0 vc-cma-mem=0/176M@0xCB000000
 BOARD_KERNEL_BASE := 0xa2000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_CONFIG := cyanogenmod_s2vep_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_i9105P_defconfig
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
@@ -26,10 +26,10 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := device/samsung/s2vep/recovery.fstab
-TARGET_RECOVERY_INITRC := device/samsung/s2vep/init.recovery.capri_ss_s2vep.rc
+TARGET_RECOVERY_FSTAB := device/samsung/i9105P/recovery.fstab
+TARGET_RECOVERY_INITRC := device/samsung/i9105P/init.recovery.capri_ss_i9105P.rc
 
-BOARD_EGL_CFG := device/samsung/s2vep/egl.cfg
+BOARD_EGL_CFG := device/samsung/i9105P/egl.cfg
 USE_OPENGL_RENDERER := true
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
 BOARD_USES_ALSA_AUDIO := true
@@ -57,8 +57,8 @@ BOARD_NO_APSME_ATTR := true
 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/s2vep/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/s2vep/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9105P/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/i9105P/libbt_vndcfg.txt
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
