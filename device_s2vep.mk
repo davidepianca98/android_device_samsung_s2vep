@@ -1,8 +1,8 @@
-$(call inherit-product-if-exists, vendor/samsung/i9105P/i9105P-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/s2vep/s2vep-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/i9105P/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/s2vep/overlay
 
-LOCAL_PATH := device/samsung/i9105P
+LOCAL_PATH := device/samsung/s2vep
 
 # Use high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
@@ -10,11 +10,11 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.capri_ss_i9105P:root/fstab.capri_ss_i9105P \
+    $(LOCAL_PATH)/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep \
     $(LOCAL_PATH)/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-    $(LOCAL_PATH)/init.capri_ss_i9105P.rc:root/init.capri_ss_i9105P.rc \
+    $(LOCAL_PATH)/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
     $(LOCAL_PATH)/init.log.rc:root/init.log.rc \
-    $(LOCAL_PATH)/ueventd.capri_ss_i9105P.rc:root/ueventd.capri_ss_i9105P.rc \
+    $(LOCAL_PATH)/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
     $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/init.bt.rc:root/init.bt.rc \
     $(LOCAL_PATH)/lpm.rc:root/lpm.rc
@@ -61,5 +61,5 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, build/target/product/generic_no_telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_i9105P
-PRODUCT_DEVICE := i9105P
+PRODUCT_NAME := full_s2vep
+PRODUCT_DEVICE := s2vep
