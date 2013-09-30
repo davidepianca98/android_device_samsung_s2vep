@@ -59,7 +59,7 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Device-specific packages
 PRODUCT_PACKAGES += \
         SamsungServiceMode
-		S2PlusSettings
+	S2PlusSettings
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_s2vep
