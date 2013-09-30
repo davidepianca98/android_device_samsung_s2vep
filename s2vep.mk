@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
         charger \
         charger_res_images
 
+# Device Settings
+PRODUCT_PACKAGES += \
+	 S2PlusSettings
+
 # Audio
 PRODUCT_PACKAGES += \
         audio.a2dp.default
@@ -59,7 +63,6 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 # Device-specific packages
 PRODUCT_PACKAGES += \
         SamsungServiceMode
-	S2PlusSettings
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_s2vep
