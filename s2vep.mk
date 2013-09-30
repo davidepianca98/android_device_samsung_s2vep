@@ -10,14 +10,14 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Init files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep \
-    $(LOCAL_PATH)/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
-    $(LOCAL_PATH)/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
-    $(LOCAL_PATH)/init.log.rc:root/init.log.rc \
-    $(LOCAL_PATH)/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
-    $(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab \
-    $(LOCAL_PATH)/init.bt.rc:root/init.bt.rc \
-    $(LOCAL_PATH)/lpm.rc:root/lpm.rc
+    $(LOCAL_PATH)/rootdir/fstab.capri_ss_s2vep:root/fstab.capri_ss_s2vep \
+    $(LOCAL_PATH)/rootdir/init.bcm281x5.usb.rc:root/init.bcm281x5.usb.rc \
+    $(LOCAL_PATH)/rootdir/init.capri_ss_s2vep.rc:root/init.capri_ss_s2vep.rc \
+    $(LOCAL_PATH)/rootdir/init.log.rc:root/init.log.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.capri_ss_s2vep.rc:root/ueventd.capri_ss_s2vep.rc \
+    $(LOCAL_PATH)/rootdir/vold.fstab:system/etc/vold.fstab \
+    $(LOCAL_PATH)/rootdir/init.bt.rc:root/init.bt.rc \
+    $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -53,12 +53,13 @@ PRODUCT_PACKAGES += \
         NfcNci \
         Tag \
         com.android.nfc_extras
+		
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Device-specific packages
 PRODUCT_PACKAGES += \
         SamsungServiceMode
-
-$(call inherit-product, build/target/product/generic_no_telephony.mk)
+		S2PlusSettings
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_s2vep
