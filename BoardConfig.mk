@@ -71,6 +71,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/s2vep/fstab.s2vep
+TARGET_RECOVERY_FSTAB := device/samsung/s2vep/recovery/fstab.s2vep
 TARGET_RECOVERY_INITRC := device/samsung/s2vep/recovery/init.recovery.capri_ss_s2vep.rc
 RECOVERY_FSTAB_VERSION := 2
